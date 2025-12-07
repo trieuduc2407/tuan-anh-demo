@@ -70,6 +70,10 @@ const World = () => {
         revealed
     )
 
+    useEffect(() => {
+        document.title = 'Bản đồ thế giới'
+    }, [])
+
     if (
         totalMarkers > 0 &&
         revealedCount === totalMarkers &&

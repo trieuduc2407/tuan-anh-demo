@@ -45,6 +45,16 @@ const SubMap = () => {
 
     useScrollRestoration(containerRef, location?.state?.scroll, imgVisible)
 
+    // Update document title based on country
+    React.useEffect(() => {
+        const countryData = mapsData[countryId]
+        if (countryData?.label) {
+            document.title = `Bản đồ ${countryData.label}`
+        } else {
+            document.title = 'Bản đồ'
+        }
+    }, [countryId])
+
     return (
         <MapContainer
             containerRef={containerRef}
@@ -59,6 +69,7 @@ const SubMap = () => {
             </button>
             <div className="relative ">
                 <img className='absolute top-12 left-15 w-20' src="/logo.svg" alt="" />
+
                 <img
                     ref={imgRef}
                     src={mapImageUrl(countryId, mapsData)}
