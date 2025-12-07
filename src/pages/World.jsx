@@ -223,6 +223,7 @@ const World = () => {
             panHandlers={panHandlers}
         >
             <div className="relative block">
+                <img className='absolute top-12 left-15 w-20' src="/logo.svg" alt="" />
                 <div className="absolute top-10 right-10 flex flex-col gap-5">
                     <button
                         className="flex h-12 w-12 items-center justify-center rounded-full border border-gray-300 bg-white text-black shadow hover:bg-gray-100"

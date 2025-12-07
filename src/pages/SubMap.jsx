@@ -58,6 +58,7 @@ const SubMap = () => {
                 <ChevronLeft className="h-10 w-10 text-white" />
             </button>
             <div className="relative ">
+                <img className='absolute top-12 left-15 w-20' src="/logo.svg" alt="" />
                 <img
                     ref={imgRef}
                     src={mapImageUrl(countryId, mapsData)}
